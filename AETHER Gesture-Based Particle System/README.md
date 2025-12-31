@@ -2,157 +2,136 @@
 
 🪐 AETHER: Gesture-Based Particle System
 
-Interactive 3D Visuals Powered by Hand Gestures & Gemini AI
+Control 3D Particles with Your Hand
 
-Created by HamdiSholahudin
+<!-- GANTI LINK INI DENGAN SCREENSHOT/GIF APLIKASI KAMU NANTI -->
+
+ Live Demo  •  Report Bug 
 
 </div>
 
-📖 Overview
+🔮 About The Project
 
-Aether is a cutting-edge web experiment that combines Computer Vision and Generative AI. It allows users to control 20,000+ 3D particles using hand gestures in real-time.
+Aether bukan sekadar partikel biasa. Ini adalah eksperimen Creative Coding yang menggabungkan keindahan matematika, visi komputer (Computer Vision), dan kecerdasan buatan (Generative AI).
 
-Additionally, it features an "AI Magic" mode where you can type any description (e.g., "Spiral DNA made of fire"), and Google's Gemini 3 Pro model will generate the mathematical code to render that shape instantly.
+Bayangkan mengendalikan ribuan bintang di layar hanya dengan mengepalkan tangan atau menjentikkan jari. Aether mewujudkannya langsung di browser Anda.
 
-✨ Features & Gestures
+✨ Key Features
 
 Gesture
 
 Visual Effect
 
-Fist (✊)
+Description
 
-Forms a Blue Saturn Planet with rings.
+✊ Fist
 
-V-Sign (✌️)
+Saturn Planet
 
-Forms clear 3D Text: "I LOVE YOU" (Gold).
+Membentuk planet biru dengan cincin yang berputar.
 
-Pinch (🤌)
+✌️ V-Sign
 
-Forms a Pink Heart shape (Finger Heart).
+"I LOVE YOU"
 
-Open Hand (🖐)
+Partikel menyusun teks 3D emas yang padat & berkilau.
 
-Rainbow Dispersion (Particles explode).
+🤌 Pinch
 
-AI Magic (✨)
+Heart Shape
 
-Generates custom shapes/colors via Gemini API.
+Membentuk hati berwarna pink (Finger Heart style).
 
-🛠️ Technology Stack
+🖐 Open
 
-Three.js: WebGL rendering engine for high-performance graphics.
+Rainbow Boom
 
-MediaPipe Hands: Machine learning pipeline for hand tracking.
+Ledakan partikel warna-warni (Dispersion).
 
-Google Gemini API: LLM for generating creative coding logic on the fly.
+✨ AI Magic
 
-Tailwind CSS: For the Glassmorphism UI overlay.
+Gemini Powered
 
-🚀 How to Run (Installation)
+Ketik imajinasimu (misal: "Spiral DNA"), AI yang akan koding visualnya!
 
-Since this project uses ES Modules (import syntax), you cannot simply double-click the index.html file. You must run it through a local server.
+🛠️ Installation
 
-Option A: Using VS Code (Recommended)
+Project ini butuh Local Server karena menggunakan ES Modules modern.
 
-Clone or Download this repository.
+Cara Cepat (VS Code)
 
-Open the folder in Visual Studio Code.
+Clone repo ini ke komputer.
 
-Install the "Live Server" extension by Ritwick Dey.
+Buka folder di Visual Studio Code.
 
-Right-click on index.html and select "Open with Live Server".
+Install Ekstensi Live Server.
 
-Allow camera access when prompted in the browser.
+Klik kanan index.html > pilih Open with Live Server.
 
-Option B: Using Python (Terminal)
+Cara Manual (Terminal)
 
-If you have Python installed, you can create a simple server via terminal:
+# Clone repository
+git clone [https://github.com/HamdiSholahudin/Creative-Code-Collection.git](https://github.com/HamdiSholahudin/Creative-Code-Collection.git)
 
-Open terminal/command prompt in the project folder.
+# Masuk ke folder
+cd Creative-Code-Collection/Aether-Gesture-Particles
 
-Run:
-
+# Jalankan server (Python)
 python -m http.server 8000
 
 
-Open your browser and go to http://localhost:8000.
+⚡ The "Magic" Prompt
 
-🔑 Configuration (Important!)
-
-To use the AI Magic feature, you need a Google Gemini API Key.
-
-Get your key from Google AI Studio.
-
-Open index.html in your code editor.
-
-Find line ~260:
-
-const apiKey = ""; // PUT YOUR API KEY HERE
-
-
-Paste your key inside the quotes.
-
-🤖 The "Magic" Prompt
-
-Want to recreate this from scratch? Click below to see the prompt used to generate this code.
-
-<details>
-<summary><b>Click to reveal the Full Prompt 🪄</b></summary>
+Ini adalah prompt rahasia yang digunakan untuk men-generate kode inti proyek ini menggunakan Gemini 3 Pro. Copy prompt ini jika kamu ingin mencoba membuatnya sendiri!
 
 Act as a Senior Creative Developer expert in Three.js, WebGL, and Computer Vision.
 
 Create a robust, single-file HTML application: "Gesture-Based Interactive Particle System" integrated with the Google Gemini API.
 
-**1. Technology Stack**
-* **Three.js:** Use `BufferGeometry` to handle ~20,000 particles efficiently.
-* **MediaPipe Hands:** For real-time hand tracking and gesture recognition.
-* **Google Gemini API:** To generate JavaScript code for particle shapes/colors dynamically.
-* **Tailwind CSS:** For a modern "Glassmorphism" UI overlay.
+**Tech Stack:**
+1. Three.js (BufferGeometry, ~20k particles).
+2. MediaPipe Hands (Real-time tracking).
+3. Google Gemini API (Generative logic for shapes/colors).
+4. Tailwind CSS (Glassmorphism UI).
 
-**2. Visual & Graphics Requirements**
-* **Post-Processing:** Implement `UnrealBloomPass` to give particles a glowing, neon aesthetic.
-* **Particle Material:** Use `THREE.PointsMaterial` with vertex colors.
-* **Surface Sampling:** For the text "I LOVE YOU", use `MeshSurfaceSampler` (from Three.js examples) to distribute particles evenly on the text surface, ensuring it looks solid and readable (not just vertices).
-* **Smooth Animation:** Use Linear Interpolation (Lerp) for all particle movements to ensure smooth transitions between shapes.
+**✨ Core Visuals:**
+- Use UnrealBloomPass for a neon/glowing effect.
+- Use MeshSurfaceSampler for dense, clear 3D Text.
+- Smooth Lerp interpolation for all movements (no jitter).
 
-**3. Gesture Recognition Logic**
-* **Fist (✊):** Particles morph into **Saturn**.
-    * *Visuals:* A Blue central sphere with Beige/Gold flat rings.
-    * *Animation:* The rings should be tilted and rotate slowly.
-* **V-Sign (✌️):** Particles form 3D Text **"I LOVE YOU"**.
-    * *Visuals:* Gold color, thick 3D geometry, facing the camera.
-* **Finger Heart (🤌):** Particles form a **Heart Shape**.
-    * *Logic:* Detect when Thumb and Index tips are close while other fingers are folded. Add tolerance to detection so it's easy to perform.
-    * *Visuals:* Pink color.
-* **Open Hand (🖐):** Particles disperse into a **Rainbow Sphere**.
-    * *Visuals:* Random rainbow colors, particles float with noise.
+**✋ Gesture Logic:**
+1. Fist ✊       -> Form a Saturn Planet (Blue sphere, Beige rings).
+2. Open Hand 🖐  -> Rainbow Sphere explosion.
+3. V-Sign ✌️     -> Form 3D Text "I LOVE YOU" (Gold).
+4. Pinch 🤌      -> Form a Pink Heart shape.
 
-**4. AI "Magic" Feature (Gemini Integration)**
-* Create an "AI Magic" button that opens a modal.
-* Allow the user to type a text prompt (e.g., "Spiral DNA" or "Matrix Rain").
-* **API Call:** Send this prompt to the Gemini API.
-* **Instruction to AI:** Ask Gemini to generate *only* the raw JavaScript loop code to calculate `targetPositions` and `targetColors` arrays based on the math of the described shape.
-* **Execution:** Use `new Function()` to safely execute the returned code and update the particle system in real-time.
+**🤖 AI Features:**
+- "AI Magic" button to open a prompt modal.
+- User types: "Spiral DNA" -> Gemini writes JS loop code -> Particles reshape.
+- User types: "Cyberpunk" -> Gemini writes JS loop code -> Particles recolor.
 
-**5. UI & UX**
-* **Camera:** Display a large, mirrored webcam preview (flipped horizontally).
-* **Controls:** Include a Color Picker and a Fullscreen button.
-* **Feedback:** Show the current detected gesture name on screen.
-* **Loading:** Add a loading overlay while fonts and MediaPipe models initialize.
-
-**6. Camera Setup**
-* Set the Three.js camera position (z=35) so objects appear large and fill the screen nicely.
-
-Produce the complete `index.html` code with all scripts and styles included.
+**UI Requirements:**
+- Minimalist Glassmorphism panel.
+- Large, mirrored webcam preview.
+- Fullscreen & Color Picker support.
 
 
-</details>
+🔑 Configuration
+
+Agar fitur AI Magic berjalan, kamu butuh API Key gratis dari Google:
+
+Dapatkan key di Google AI Studio.
+
+Buka index.html.
+
+Paste key kamu di baris ~260:
+
+const apiKey = "PASTE_YOUR_API_KEY_HERE";
+
 
 <div align="center">
 
-Star this repo if you find it cool! ⭐
-Visit my GitHub Profile
+Built with ❤️ using Gemini 3 Pro
+Follow for more creative coding contents!
 
 </div>
