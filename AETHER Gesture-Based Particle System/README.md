@@ -4,9 +4,6 @@
 
 Control 3D Particles with Your Hand
 
-<!-- GANTI LINK INI DENGAN SCREENSHOT/GIF APLIKASI KAMU NANTI -->
-
- Live Demo  •  Report Bug 
 
 </div>
 
