@@ -1,134 +1,124 @@
 <div align="center">
+🪐 AETHER
+Gesture-Based Interactive Particle System
 
-🪐 AETHER: Gesture-Based Particle System
+Control thousands of 3D particles with your bare hands — in real time.
 
-Control 3D Particles with Your Hand
-
-
-</div>
-
+<p> <img src="https://img.shields.io/badge/Three.js-WebGL-black?style=flat-square&logo=three.js"> <img src="https://img.shields.io/badge/MediaPipe-Computer%20Vision-blue?style=flat-square"> <img src="https://img.shields.io/badge/Gemini%203%20Pro-Generative%20AI-purple?style=flat-square"> <img src="https://img.shields.io/badge/Status-Experimental-orange?style=flat-square"> </p> <!-- REPLACE WITH YOUR PROJECT GIF / SCREENSHOT --> <img src="./assets/preview.gif" width="80%"> </div>
 🔮 About The Project
 
-Aether bukan sekadar partikel biasa. Ini adalah eksperimen Creative Coding yang menggabungkan keindahan matematika, visi komputer (Computer Vision), dan kecerdasan buatan (Generative AI).
+AETHER is not just another particle demo.
+It is a creative coding experiment that blends:
 
-Bayangkan mengendalikan ribuan bintang di layar hanya dengan mengepalkan tangan atau menjentikkan jari. Aether mewujudkannya langsung di browser Anda.
+🧮 Mathematical beauty
+
+👁️ Computer Vision (real-time hand tracking)
+
+🤖 Generative AI (Google Gemini)
+
+Imagine controlling thousands of glowing particles in 3D space using nothing but your hands — all running directly in the browser.
 
 ✨ Key Features
+Gesture	Visual Effect	Description
+✊ Fist	🪐 Saturn Planet	A blue sphere with rotating cosmic rings
+✌️ V-Sign	💛 I LOVE YOU	Dense, glowing golden 3D text
+🤌 Pinch	💗 Heart Shape	Pink finger-heart formation
+🖐 Open Hand	🌈 Rainbow Boom	Colorful particle dispersion
+✨ AI Magic	🤖 Gemini Powered	Type an idea → AI writes the visual logic
+🧠 AI Magic (Generative Mode)
 
-Gesture
+Click AI Magic, then type ideas like:
 
-Visual Effect
+Spiral DNA
+Cyberpunk Vortex
+Golden Flower of Life
 
-Description
+Gemini will:
 
-✊ Fist
+Generate JavaScript loop logic
 
-Saturn Planet
+Modify particle shapes, motion, and colors
 
-Membentuk planet biru dengan cincin yang berputar.
+Apply everything live to the 3D scene
 
-✌️ V-Sign
+Human imagination → AI code → real-time visuals.
 
-"I LOVE YOU"
+🛠️ Tech Stack
 
-Partikel menyusun teks 3D emas yang padat & berkilau.
+Three.js — WebGL particle engine (~20,000 particles)
 
-🤌 Pinch
+MediaPipe Hands — Real-time hand tracking
 
-Heart Shape
+Google Gemini API — Generative visual logic
 
-Membentuk hati berwarna pink (Finger Heart style).
+Tailwind CSS — Glassmorphism UI
 
-🖐 Open
+UnrealBloomPass — Neon glow effects
 
-Rainbow Boom
+MeshSurfaceSampler — High-density 3D text
 
-Ledakan partikel warna-warni (Dispersion).
+Smooth Lerp — Jitter-free motion
 
-✨ AI Magic
+🚀 Installation
 
-Gemini Powered
+⚠️ This project requires a local server due to modern ES Modules.
 
-Ketik imajinasimu (misal: "Spiral DNA"), AI yang akan koding visualnya!
+Quick Start (VS Code)
 
-🛠️ Installation
+Clone the repository
 
-Project ini butuh Local Server karena menggunakan ES Modules modern.
+Open the folder in Visual Studio Code
 
-Cara Cepat (VS Code)
+Install the Live Server extension
 
-Clone repo ini ke komputer.
+Right-click index.html → Open with Live Server
 
-Buka folder di Visual Studio Code.
+Manual Setup (Terminal)
 
-Install Ekstensi Live Server.
+Clone repository
+git clone https://github.com/HamdiSholahudin/Creative-Code-Collection.git
 
-Klik kanan index.html > pilih Open with Live Server.
-
-Cara Manual (Terminal)
-
-# Clone repository
-git clone [https://github.com/HamdiSholahudin/Creative-Code-Collection.git](https://github.com/HamdiSholahudin/Creative-Code-Collection.git)
-
-# Masuk ke folder
+Navigate to project folder
 cd Creative-Code-Collection/Aether-Gesture-Particles
 
-# Jalankan server (Python)
+Start local server
 python -m http.server 8000
 
+Open in browser
+http://localhost:8000
 
-⚡ The "Magic" Prompt
+🔑 Configuration (Gemini API)
 
-Ini adalah prompt rahasia yang digunakan untuk men-generate kode inti proyek ini menggunakan Gemini 3 Pro. Copy prompt ini jika kamu ingin mencoba membuatnya sendiri!
+To enable AI Magic:
 
-Act as a Senior Creative Developer expert in Three.js, WebGL, and Computer Vision.
+Get a free API key from Google AI Studio
 
-Create a robust, single-file HTML application: "Gesture-Based Interactive Particle System" integrated with the Google Gemini API.
+Open index.html
 
-**Tech Stack:**
-1. Three.js (BufferGeometry, ~20k particles).
-2. MediaPipe Hands (Real-time tracking).
-3. Google Gemini API (Generative logic for shapes/colors).
-4. Tailwind CSS (Glassmorphism UI).
-
-**✨ Core Visuals:**
-- Use UnrealBloomPass for a neon/glowing effect.
-- Use MeshSurfaceSampler for dense, clear 3D Text.
-- Smooth Lerp interpolation for all movements (no jitter).
-
-**✋ Gesture Logic:**
-1. Fist ✊       -> Form a Saturn Planet (Blue sphere, Beige rings).
-2. Open Hand 🖐  -> Rainbow Sphere explosion.
-3. V-Sign ✌️     -> Form 3D Text "I LOVE YOU" (Gold).
-4. Pinch 🤌      -> Form a Pink Heart shape.
-
-**🤖 AI Features:**
-- "AI Magic" button to open a prompt modal.
-- User types: "Spiral DNA" -> Gemini writes JS loop code -> Particles reshape.
-- User types: "Cyberpunk" -> Gemini writes JS loop code -> Particles recolor.
-
-**UI Requirements:**
-- Minimalist Glassmorphism panel.
-- Large, mirrored webcam preview.
-- Fullscreen & Color Picker support.
-
-
-🔑 Configuration
-
-Agar fitur AI Magic berjalan, kamu butuh API Key gratis dari Google:
-
-Dapatkan key di Google AI Studio.
-
-Buka index.html.
-
-Paste key kamu di baris ~260:
+Find this line (around line ~260):
 
 const apiKey = "PASTE_YOUR_API_KEY_HERE";
 
+Paste your API key
+
+🌌 Vision
+
+AETHER is designed as a foundation for:
+
+Interactive digital art
+
+Creative coding portfolios
+
+Web-based installation art
+
+AI-driven generative visual systems
 
 <div align="center">
+Built with ❤️ by Hamdi Sholahudin
 
-Built with ❤️ using Gemini 3 Pro
-Follow for more creative coding contents!
+Powered by Gemini 3 Pro
+
+⭐ Star this repo if it inspires you
+🚀 Follow for more creative coding experiments
 
 </div>
