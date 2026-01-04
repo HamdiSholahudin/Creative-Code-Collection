@@ -1,16 +1,83 @@
-# React + Vite
+# ✨ Hanir Lab - Ultimate Productivity Space
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Hanir Lab** is a web-based productivity application combining the Pomodoro technique, Task Management (To-Do List), and calming *Soundscapes* within an aesthetic *Glassmorphism* interface.
 
-Currently, two official plugins are available:
+Designed specifically as a digital space for focus, learning, and worship, featuring integrated Murottal Al-Qur'an audio.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌟 Key Features
 
-## React Compiler
+### ⏱️ Smart Focus Timer
+- **Flexible Modes:** Presets for Study (25/5), Work (50/10), Health (45/15), and Custom mode.
+- **Visual Indicators:** Dynamic backgrounds and character assets that change between *Focus* and *Break* modes.
+- **Daily Stats:** Counters for completed focus sessions and breaks.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🎧 Audio & Spiritual Soundscape
+- **Native MP3 Player:** Play Lofi and Murottal audio seamlessly without ads.
+- **Qur'an Playlist:** A curated collection of selected Surahs (Al-Kahf, Ar-Rahman, Yasin, Al-Mulk, Juz 30) by renowned Qaris (Mishary Rashid, Saad Al Ghamdi).
+- **Spotify Integration:** Embed your favorite Spotify playlists.
 
-## Expanding the ESLint configuration
+### 🎨 Personalization & Theming
+- **Color Themes:** Choose from Nebula (Purple), Nature (Green), Ocean (Blue), Sunset (Orange), and Midnight (Dark).
+- **Custom Background:** Upload your own image/wallpaper from your local gallery.
+- **Editable Profile:** Customize the user greeting name ("Hi, [Name]").
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📝 Task Management
+- **To-Do List:** Add, edit, delete, and mark tasks as completed.
+- **Simple & Clean:** A glass overlay interface that doesn't distract from your focus.
+
+### 🌍 Localization
+- **Dual Language:** Full support for Indonesian (ID) and English (EN).
+
+## 🛠️ Tech Stack
+
+This application is built using modern web technologies:
+
+- **[React.js](https://reactjs.org/)** - Main UI Library.
+- **[Vite](https://vitejs.dev/)** - Next Generation Frontend Tooling.
+- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework for responsive design.
+- **[Lucide React](https://lucide.dev/)** - Beautiful & consistent icons.
+
+## 🚀 Installation & Setup
+
+To run this project locally on your machine:
+
+1.  **Clone Repository**
+    ```bash
+    git clone [https://github.com/YOUR-USERNAME/hanir-lab.git](https://github.com/YOUR-USERNAME/hanir-lab.git)
+    cd hanir-lab
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Run Local Server**
+    ```bash
+    npm run dev
+    ```
+
+4.  Open your browser and navigate to `http://localhost:5173`.
+
+## 📂 Asset Structure
+
+Ensure you have a `public/images` folder to store character assets and logos for the application to run perfectly.
+
+```text
+public/
+├── images/
+│   ├── logo.png
+│   ├── muslimah-focus.png
+│   ├── muslimah-break.png
+│   ├── engineer-focus.png
+│   └── engineer-break.png
+```
+
+## 💖 Credits
+- Audio Qur'an:QuranicAudio.com
+
+- Avatars: DiceBear API
+
+- Icons: Lucide React
+
+Made with ❤️ by Hamdi Sholahudin for NIRDI Lab.
